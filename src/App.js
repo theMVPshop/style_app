@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+import React from 'react';
+import { ColorPicker, ChromePicker } from 'react-color';
+import { useColor } from 'react-color-palette';
+import "react-color-palette/lib/css/styles.css";
+import ColorChooser from './ColorChooser';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+ return <div className='rowC'>
+   <ColorChooser />
+   <ColorChooser />
+   <ColorChooser />
+   <ColorChooser />
+   </div>
+};
 
 export default App;
