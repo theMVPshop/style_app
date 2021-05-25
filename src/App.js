@@ -1,10 +1,13 @@
 import './App.css';
 import MainDisplay from './components/MainDisplay';
+import ThumbnailLayout from './components/ThumbnailLayout';
 
 function App() {
   return (
-
-    <MainDisplay />
+    <div>
+      <ThumbnailLayout />
+      <MainDisplay />
+    </div>
   
   );
 }

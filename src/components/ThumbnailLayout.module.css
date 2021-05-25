@@ -1,13 +1,15 @@
 
 .sidebarwrapper {
   position: absolute;
-  box-shadow: 0 0 10px 0 rgb(77 77 77 / 20%);
   overflow: scroll;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .sidebar {
   width: 100px;
   padding: 20px 20px 5px 20px;
+  background-color: white;
 }
 
 

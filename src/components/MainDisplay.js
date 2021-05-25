@@ -1,12 +1,13 @@
 
 import ThumbnailLayout from './ThumbnailLayout';
 import classes from './MainDisplay.module.css';
+import Layout1 from './Layout1';
 
 const MainDisplay = () => {
   return (
     
     <div className={classes.mainContainer}>
-        <ThumbnailLayout />
+      <Layout1 />
     </div>
 
   )
