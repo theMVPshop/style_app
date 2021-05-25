@@ -25,7 +25,7 @@ class ColorChooser extends React.Component {
     this.setState({ backgroundColor: color.hex,
       hsl: hexToHsl(color.hex)
   }, function(){
-    console.log('color hex ' + color.hex + 'this.style.color ' + this.style.color + 'state.color ' + this.state.backgroundColor + 'hsl ' + this.state.hsl)
+    console.log('color hex ' + this.state.hsl)
   })};
   render(){
 
