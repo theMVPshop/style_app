@@ -1,14 +1,11 @@
 
-.sidebarwrapper {
+.navbarwrapper {
   position: absolute;
   overflow: scroll;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-}
-
-.sidebar {
   width: 100px;
-  padding: 20px 20px 5px 20px;
+  padding: 5px 5px 2px 5px;
   background-color: white;
 }
 

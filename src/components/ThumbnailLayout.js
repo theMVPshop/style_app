@@ -3,16 +3,17 @@ import thumbnaildata from './thumbnaildata';
 import classes from './ThumbnailLayout.module.css';
 
 
-const ThumbnailLayout = () => {
+const ThumbnailLayout = (props) => {
 
   return (
     
-      <div className={classes.sidebarwrapper}>
-          <div className={classes.sidebar}>
+      
+      <div className={classes.navbarwrapper}>  
             {thumbnaildata.thumbnails.map((thumbnail) => {
-            return <Thumbnail {...thumbnail}/>
+            return <Thumbnail 
+              handleLayoutChange={props.handleLayoutChange} 
+              {...thumbnail}/>
             })}
-          </div>
       </div>
   
     // <div>
