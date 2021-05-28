@@ -1,19 +1,17 @@
 .wrapper {
   margin: 0 auto;
-  border-radius: 10px;
-  padding: 50px;
+  padding: 50px 0 50px 0;
   background-color: skyblue;
   display: flex;
   justify-content: center;
-  height: 960px;
 }
 
 .boxContainer {
   border: 5px solid white;
   display: flex;
-  height: 500px;
   flex-direction: column;
-  width: 750px;
+  width: 500px;
+  height: 475px;
   border-radius: 10px;
   box-shadow: rgb(38 57 77) 0px 20px 30px -10px;
   justify-content: center;
@@ -22,8 +20,7 @@
 }
 
 .header {
-  display: flex;
-  justify-content: center;
+  padding-bottom: 25px;
 }
 
 .body {
@@ -35,8 +32,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 200px;
-  height: 400px;
+  width: 125px;
+  height: 250px;
   background-color: cyan;
   border-radius: 10px;
   margin: 10px;

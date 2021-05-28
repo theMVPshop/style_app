@@ -1,7 +1,7 @@
 .wrapper {
   margin: 0 auto;
   border-radius: 10px;
-  padding: 50px 0 150px 0;
+  padding: 50px 0 50px 0;
   background-color: skyblue;
   display: flex;
   justify-content: center;
@@ -11,25 +11,24 @@
   display: flex;
   border-radius: 10px;
   background-color: white;
-  width: 50%;
+  height: 475px;
+  width: 500px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .column1 {
-  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 2%;
   background-color: lightblue;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 50%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .column2 {
-  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,10 +46,7 @@
   justify-content: center;
   align-items: center;
   height: 50%;
-  
   border-bottom: 5px solid white;
-/*   border: 5px solid white; */
-  
 }
 
 .box2 {
@@ -59,12 +55,7 @@
   justify-content: center;
   align-items: center;
   height: 50%;
-/*   border: 5px solid white; */
   border-radius: 10px;
-}
-
-h1 {
-  color: navy;
 }
 
 p {

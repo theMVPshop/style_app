@@ -1,5 +1,4 @@
 
-import ThumbnailLayout from './ThumbnailLayout';
 import classes from './MainDisplay.module.css';
 import Layout1 from './Layout1';
 import Layout2 from './Layout2';

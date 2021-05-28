@@ -8,12 +8,14 @@ const ThumbnailLayout = (props) => {
   return (
     
       
-      <div className={classes.navbarwrapper}>  
-            {thumbnaildata.thumbnails.map((thumbnail) => {
-            return <Thumbnail 
-              handleLayoutChange={props.handleLayoutChange} 
-              {...thumbnail}/>
-            })}
+      <div className={classes.navbarwrapper}> 
+        <div className={classes.navbar}>
+          {thumbnaildata.thumbnails.map((thumbnail) => {
+          return <Thumbnail 
+            handleLayoutChange={props.handleLayoutChange} 
+            {...thumbnail}/>
+          })}
+        </div>
       </div>
   
     // <div>

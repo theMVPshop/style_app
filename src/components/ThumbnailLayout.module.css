@@ -1,12 +1,20 @@
 
 .navbarwrapper {
-  position: absolute;
-  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: skyblue;
+}
+
+.navbar {
+  width: 65%;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  width: 100px;
-  padding: 5px 5px 2px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 
