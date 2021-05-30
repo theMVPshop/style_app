@@ -5,10 +5,12 @@ import Layout2 from './Layout2';
 import Layout3 from './Layout3';
 import Layout4 from './Layout4';
 import LayoutAbout from './LayoutAbout';
+import ColorLayout from './ColorLayout';
+import FontLayout from './FontLayout';
 
 const MainDisplay = props => {
 
-  console.log(props.displayId)
+  console.log(props.displayLayoutId)
 
   const layoutComponent = (displayId) => {
     switch (displayId) {
@@ -31,7 +33,9 @@ const MainDisplay = props => {
 
     
     <div className={classes.mainContainer}>
-      {layoutComponent(props.displayId)}
+      <ColorLayout />
+      {layoutComponent(props.displayLayoutId)}
+      <FontLayout />
     </div>
 
   )

@@ -6,15 +6,21 @@ import ThumbnailLayout from './components/ThumbnailLayout';
 function App() {
 
   const [displayLayout, setDisplayLayout] = useState('');
+  const [displayColor, setDisplayColor] = useState('');
 
   const displayLayoutHandler = (displayId) => {
     setDisplayLayout(displayId);
   }
 
+  const displayColorHandler = (colorId) => {
+    setDisplayColor(colorId);
+  }
+
   return (
     <div>
       <ThumbnailLayout handleLayoutChange={displayLayoutHandler}/>
-      <MainDisplay displayId={displayLayout}/>
+      <MainDisplay 
+      displayLayoutId={displayLayout}/>
     </div>
   
   );

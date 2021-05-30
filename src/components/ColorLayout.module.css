@@ -1,0 +1,12 @@
+.colorWrapper {
+  border: solid red;
+  background-color: skyblue;
+  width: 20%;
+  height: 350px;
+  margin: 2%;
+  border-radius: 10px;
+}
+
+.buttonContainer {
+  
+}
