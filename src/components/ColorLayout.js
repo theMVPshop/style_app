@@ -2,6 +2,11 @@ import classes from "./ColorLayout.module.css";
 
 
 const ColorLayout = () => {
+
+  // const onColorClick = (e) => {
+  //   props.handleColorChange()
+  // }
+
     return (
       <div className={classes.colorWrapper}>
         <h2>list of color buttons</h2>
