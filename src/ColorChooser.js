@@ -26,8 +26,14 @@ class ColorChooser extends React.Component {
       hsl: hexToHsl(color.hex)
   }, function(){
     console.log('color hex ' + this.state.hsl)
-  })};
-  render(){
+  })
+console.log(  typeof(this.state.backgroundColor))
+
+};
+  render()
+  
+  
+  {
 
   return <div>
   <Palette style={this.state}/>
