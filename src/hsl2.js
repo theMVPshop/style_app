@@ -78,17 +78,19 @@ a = [1, 2, 3, 4, 5]
     // let divisor = num/amount
 
     // let num = coordinates[0];
-    var num = [55, 48, 90, 33, 66]
-    let am = num.length
+    var num = 30
+    let am = 4
     let divisor = 360/am
     var arre = []
 const loop = () => {
 
-
-for(var i = 1; i < num.length; i++){
-    let numb = (num[1] + divisor*(i+1)) % 360
+var j = 1;
+for(var i = 0; i < am; i++){
+    let numb = (num + divisor*(j)) % 360
     console.log(numb)
+    console.log((i+1)*divisor)
     arre.push(numb)
+    j++
     // let number = num[i]
 }
 return arre
@@ -96,7 +98,7 @@ return arre
 }
 console.log(loop())
 
-    let first_num = this.state.hsl[0]
+    let first_num = arre[0]
     let sec_num = (first_num + 120) % 360
     let third_num = (first_num + 240) % 360
     let ar1 = [first_num, coordinates[1], coordinates[2]]
