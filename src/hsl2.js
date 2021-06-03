@@ -69,8 +69,8 @@ a = [1, 2, 3, 4, 5]
       console.log('color hsl ' + this.state.hsl)
       console.log(' this.state ' + this.state.backgroundColor)
     })
-      let coordinates = this.state.hsl;
-      console.log(coordinates)
+
+
     //   strcolor = back.split(",")
     //   console.log(strcolor)
     // var amount = 5
@@ -78,38 +78,35 @@ a = [1, 2, 3, 4, 5]
     // let divisor = num/amount
 
     // let num = coordinates[0];
+   
+
     var num = 30
     let am = 4
     let divisor = 360/am
     var arre = []
-const loop = () => {
-
+    let coordinates = [1, 2, 3]
 var j = 1;
 for(var i = 0; i < am; i++){
     let numb = (num + divisor*(j)) % 360
-    console.log(numb)
-    console.log((i+1)*divisor)
     arre.push(numb)
     j++
+    console.log(arre)
     // let number = num[i]
 }
-return arre
+    let first_num = arre.pop()
+      let ar = []
+    let ar2 = []
+for(i = 0; i < am - 1; i++){
 
-}
-console.log(loop())
+    ar.push(arre[i]) 
+    ar.push(coordinates[1]) 
+    ar.push(coordinates[2])
+    ar2.push(ar)
+    ar = []
+  }
+console.log(ar2)
 
-    let first_num = arre[0]
-    let sec_num = (first_num + 120) % 360
-    let third_num = (first_num + 240) % 360
-    let ar1 = [first_num, coordinates[1], coordinates[2]]
-    let ar2 = [sec_num, coordinates[1], coordinates[2]]
-    let ar3 = [third_num, coordinates[1], coordinates[2]]
-    console.log(first_num)
-    console.log(sec_num)
-    console.log(this.state.hsl)
-    console.log(ar1)
-    console.log(ar2)
-    console.log(ar3)
+
     function hslToHex(h, s, l) {
         l /= 100;
         const a = s * Math.min(l, 1 - l) / 100;
@@ -122,19 +119,19 @@ console.log(loop())
       }
     div1 = document.getElementById('div1');
     // document.getElementById('div1').style.backgroundColor = h
-    document.getElementById('div1').style.backgroundColor = hslToHex(ar1[0], ar1[1],ar1[2])
+    // document.getElementById('div1').style.backgroundColor = hslToHex(ar1[0], ar1[1],ar1[2])
     // let string = num.slice(4, num.length-1)
     // console.log(string)
     // let str = string.split(", ")
     // console.log(str)
       
-    div2 = document.getElementById('div2');
-    document.getElementById('div2').style.backgroundColor = hslToHex(ar2[0], ar2[1],ar2[2])
-    console.log(document.getElementById('div2').style.backgroundColor)
+    // div2 = document.getElementById('div2');
+    // document.getElementById('div2').style.backgroundColor = hslToHex(ar2[0], ar2[1],ar2[2])
+    // console.log(document.getElementById('div2').style.backgroundColor)
 
-    div3 = document.getElementById('div3');
-    document.getElementById('div3').style.backgroundColor = hslToHex(ar3[0], ar3[1],ar3[2])
-    console.log(document.getElementById('div3').style.backgroundColor)
+    // div3 = document.getElementById('div3');
+    // document.getElementById('div3').style.backgroundColor = hslToHex(ar3[0], ar3[1],ar3[2])
+    // console.log(document.getElementById('div3').style.backgroundColor)
 
 
 };
