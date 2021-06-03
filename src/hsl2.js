@@ -5,7 +5,7 @@ import "react-color-palette/lib/css/styles.css";
 import Palette from './palette';
 var hexToHsl = require('hex-to-hsl');
 
-class HSL3 extends React.Component {
+class HSLAny extends React.Component {
     constructor(props){
         super(props);
 
@@ -74,15 +74,28 @@ a = [1, 2, 3, 4, 5]
     //   strcolor = back.split(",")
     //   console.log(strcolor)
     // var amount = 5
-    var num = []
-    let divisor = num/amount
+
+    // let divisor = num/amount
 
     // let num = coordinates[0];
-// for(var i = 1; i < amount.length - 1; i++){
+    var num = [55, 48, 90, 33, 66]
+    let am = num.length
+    let divisor = 360/am
+    var arre = []
+const loop = () => {
 
-//     num[i] = (num + 360/amount*i) % 360
 
-// }
+for(var i = 1; i < num.length; i++){
+    let numb = (num[1] + divisor*(i+1)) % 360
+    console.log(numb)
+    arre.push(numb)
+    // let number = num[i]
+}
+return arre
+
+}
+console.log(loop())
+
     let first_num = this.state.hsl[0]
     let sec_num = (first_num + 120) % 360
     let third_num = (first_num + 240) % 360
@@ -151,4 +164,4 @@ a = [1, 2, 3, 4, 5]
   }
 };
 
-export default HSL3;
+export default HSLAny;

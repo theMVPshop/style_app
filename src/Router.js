@@ -10,8 +10,10 @@ Remember to export the component at the end
 import Main from './Main';
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import HSL from './hsl'
+import HSL3 from './hsl'
 import ColorChooser from './ColorChooser';
+import HSLAny from './hsl2';
+
 // Write component imports here //
 
 
@@ -22,7 +24,8 @@ function Router (){
         <BrowserRouter>
                             <Switch>
                 <Route exact path="/" component = {Main} />
-                <Route exact path="/hsl" component = {HSL} />   
+                <Route exact path="/hsl" component = {HSL3} />   
+                <Route exact path="/hslany" component = {HSLAny} />   
         </Switch>
         </BrowserRouter>
 
