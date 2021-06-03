@@ -1,0 +1,9 @@
+{
+  "thumbnails": [
+    {"id": "About", "src": "Images/LayoutAbout.png"},
+    {"id": "Display1", "src": "Images/Display1.png"},
+    {"id": "Display2", "src": "Images/Display2.png"},
+    {"id": "Display3", "src": "Images/Display3.png"},
+    {"id": "Display4", "src": "Images/Display4.png"}
+  ]
+}

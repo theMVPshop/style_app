@@ -1,0 +1,48 @@
+.wrapper {
+  padding: 0px 0 50px 0;
+  background-color: skyblue;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.boxContainer {
+  border: 5px solid white;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 475px;
+  border-radius: 10px;
+  box-shadow: rgb(38 57 77) 0px 20px 30px -10px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.header {
+  padding-bottom: 25px;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 125px;
+  height: 250px;
+  background-color: cyan;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.avatar {
+  vertical-align: middle;
+  margin-top: 20%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}

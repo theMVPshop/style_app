@@ -1,0 +1,8 @@
+.fontWrapper {
+  border: solid red;
+  background-color: skyblue;
+  width: 20%;
+  height: 350px;
+  border-radius: 10px;
+  margin: 2%;
+}
