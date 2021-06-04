@@ -1,0 +1,21 @@
+{
+  "colors": [
+    {
+      "colorName": "brown",
+      "hex": "#645434"
+    },
+    {
+      "colorName": "red",
+      "hex": "#802321"
+    },
+    {
+      "colorName": "blue",
+      "hex": "#234484"
+    },
+    {
+      "colorName": "green",
+      "hex": "#009844"
+    }
+  ]
+}
+
