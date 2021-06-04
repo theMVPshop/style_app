@@ -1,9 +1,11 @@
-import classes from './FontLayout.module.css';
 
-const FontLayout = () => {
+import classes from './FontLayout.module.css';
+import FontLayoutButtons from './FontLayoutButtons';
+
+const FontLayout = props => {
   return (
     <div className={classes.fontWrapper}>
-      Test
+      <FontLayoutButtons handleFontChange={props.handleFontChange}/>
     </div>
   )
 };
