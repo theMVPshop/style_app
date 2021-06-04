@@ -1,5 +1,5 @@
 .wrapper {
-  padding: 0px 0 50px 0;
+  padding: 0px 0 60px 0;
   background-color: skyblue;
   display: flex;
   justify-content: center;
@@ -7,7 +7,6 @@
 }
 
 .boxContainer {
-  border: 5px solid white;
   border-radius: 10px;
   background-color: white;
   height: 475px;
@@ -16,7 +15,8 @@
 }
 
 .box1 {
-  height: 50%;
+  height: 45%;
+  margin: 3%;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,8 @@
 }
 
 .box2 {
-  height: 50%;
+  height: 45%;
+  margin: 3%;
   border-radius: 10px;
   display: flex;
   flex-direction: column;

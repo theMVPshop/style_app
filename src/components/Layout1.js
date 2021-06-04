@@ -1,9 +1,9 @@
 import classes from './Layout1.module.css';
 
-const Layout1 = () => {
+const Layout1 = (props) => {
   return (
     <div className={classes.wrapper}>
-      <div className={classes.boxContainer}>
+      <div className={classes.boxContainer}  style={props.style}>
 
       <div className={classes.box1}>
         <h1>Title</h1>

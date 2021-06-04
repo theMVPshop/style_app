@@ -1,6 +1,5 @@
 .wrapper {
   padding: 0px 0 50px 0;
-  background-color: skyblue;
   display: flex;
   justify-content: center;
   margin-top: 50px;
@@ -16,7 +15,6 @@
   box-shadow: rgb(38 57 77) 0px 20px 30px -10px;
   justify-content: center;
   align-items: center;
-  background-color: white;
 }
 
 .header {

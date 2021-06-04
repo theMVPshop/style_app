@@ -9,21 +9,30 @@ import LayoutAbout from './LayoutAbout';
 const MainDisplay = props => {
 
   console.log(props.displayLayoutId)
+  console.log(props.displayColorId)
 
-  const layoutComponent = (displayId) => {
-    switch (displayId) {
+  const layoutComponent = (props) => {
+
+    const backgroundHexColor = props.displayColorId;
+    console.log(backgroundHexColor);
+
+    const fontType = props.displayFontId;
+    console.log(fontType)
+
+
+    switch (props.displayLayoutId) {
       case "About":
-        return (<LayoutAbout />)
+        return (<LayoutAbout style={{backgroundColor: backgroundHexColor}} font={{fontFamily: fontType}} />)
       case "Display1":
-        return (<Layout1 />)
+        return (<Layout1 style={{backgroundColor: backgroundHexColor}}/>)
       case "Display2":
-        return (<Layout2 />)
+        return (<Layout2 style={{backgroundColor: backgroundHexColor}}/>)
       case "Display3":
-        return (<Layout3 />)
+        return (<Layout3 style={{backgroundColor: backgroundHexColor}}/>)
       case "Display4":
-        return (<Layout4 />)
+        return (<Layout4 style={{backgroundColor: backgroundHexColor}}/>)
       default: 
-        return (<LayoutAbout />)
+        return (<LayoutAbout style={{backgroundColor: backgroundHexColor}} font={{fontFamily: fontType}} />)
     }
   }
 
@@ -31,7 +40,7 @@ const MainDisplay = props => {
 
     
     <div className={classes.mainContainer}>
-      {layoutComponent(props.displayLayoutId)}
+      {layoutComponent(props)}
     </div>
 
   )

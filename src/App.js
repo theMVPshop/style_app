@@ -9,24 +9,33 @@ import classes from './App.module.css';
 function App() {
 
   const [displayLayout, setDisplayLayout] = useState('');
-  // const [displayColor, setDisplayColor] = useState('');
+  const [displayColor, setDisplayColor] = useState('');
+  const [displayFont, setDisplayFont] = useState('');
 
   const displayLayoutHandler = (displayId) => {
     setDisplayLayout(displayId);
   }
 
-  // const displayColorHandler = (color) => {
-  //   setDisplayColor(color);
-  // }
+  const displayColorHandler = (colorId) => {
+    setDisplayColor(colorId);
+    console.log(colorId)
+  }
+
+  const displayFontHandler = (fontId) => {
+    setDisplayFont(fontId);
+  }
 
   return (
     <div>
       <ThumbnailLayout handleLayoutChange={displayLayoutHandler} />
       <div className={classes.layoutWrapper}>
-        <ColorLayout />
+        <ColorLayout handleColorChange={displayColorHandler} />
         <MainDisplay 
-          displayLayoutId={displayLayout} />
-        <FontLayout />
+          displayLayoutId={displayLayout}
+          displayColorId={displayColor} 
+          displayFontId={displayFont}
+          />
+        <FontLayout handleFontChange={displayFontHandler}/>
       </div>
     </div>
   
