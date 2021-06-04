@@ -1,0 +1,17 @@
+.bodyStyle  {
+  display: flex;
+  
+  height: 90px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-items: flex-start;
+  padding: 10px;
+  flex-direction: column;
+}
+.example {
+  padding: 10px;
+}
+.button {
+  margin-left: 10px;
+}

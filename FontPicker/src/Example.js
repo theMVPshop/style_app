@@ -39,7 +39,7 @@ export default function ExampleComponent() {
   const classes = useStyles();
 
   return (
-    <Card variant="outlined" className={classes.root}>
+    <Card variant="outlined"  className={classes.root}>
       <CardContent>
         <Typography
           style={{ fontFamily: `${titleFont}`, fontWeight: `${titleVariant}` }}

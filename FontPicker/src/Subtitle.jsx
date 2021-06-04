@@ -8,6 +8,7 @@ import Select from "@material-ui/core/Select";
 import axios from "axios";
 import Button from "@material-ui/core/Button";
 import { FontContext } from "./FontContext";
+import './Picker.css'
 
 const useStyles = makeStyles((theme) => ({
   formControl: {

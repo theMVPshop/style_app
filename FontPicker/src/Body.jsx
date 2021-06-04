@@ -8,6 +8,7 @@ import Select from "@material-ui/core/Select";
 import axios from "axios";
 import Button from "@material-ui/core/Button";
 import { FontContext } from "./FontContext";
+import './Picker.css'
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -27,15 +28,6 @@ export default function BodyComponent() {
   const { bodyV } = useContext(FontContext);
   const [bodyVariant, setBodyVariant] = bodyV;
   const [variants, setVariants] = useState([]);
-  const bodyStyle = {
-    display: "flex",
-    margin: "5px",
-    height: "40px",
-    justifyContent: "flex-start",
-    alignItems:"center",
-    padding: "5px",
-    flexDirection: "row"
-  };
 
   useEffect(() => {
     let arr = [];
@@ -74,7 +66,8 @@ export default function BodyComponent() {
 
   return (
     <div>
-      <div style= {bodyStyle}>
+      <div className='bodyStyle'>
+        <div style={{display:'flex'}}>
       <FormControl className={classes.formControl}>
         <InputLabel>Body Font</InputLabel>
         <Select value={bodyFont} onChange={handleChange}>
@@ -97,11 +90,13 @@ export default function BodyComponent() {
         </Select>
         <FormHelperText></FormHelperText>
       </FormControl>
-      <Button size="small" variant="contained" onClick={() => randomize()}>
+      </div>
+
+      <Button className="button" size="small" variant="contained" onClick={() => randomize()}>
         Random Body Font?
       </Button>
       </div>
-      <div style={bodyStyle}>
+      <div className='example'>
       <p style={{ fontFamily: `${bodyFont}` }}>
         This will be your body in {bodyFont}, {bodyVariant}!
       </p>
