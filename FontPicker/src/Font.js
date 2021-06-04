@@ -12,7 +12,6 @@ function Font() {
   const bodyStyle = {
     display: "flex",
     margin: "10px",
-    
     padding: "5px",
     flexDirection: "column"
   };
@@ -20,8 +19,8 @@ function Font() {
   return (
     <FontProvider>
       <Paper style={bodyStyle} elevation={3}>
-        <FontLoader />
-        <Suggestions></Suggestions>
+        <FontLoader/>
+        <Suggestions/>
         <SimpleSelect/>
         <SubTitleComponent/>
         <BodyComponent/>

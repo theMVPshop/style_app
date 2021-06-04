@@ -1,16 +1,13 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
-import FormHelperText from "@material-ui/core/FormHelperText";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
-import axios from "axios";
 import Button from "@material-ui/core/Button";
 import { FontContext } from "./FontContext";
-import './Picker.css';
+import "./Picker.css";
 import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -24,38 +21,21 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SimpleSelect() {
   const classes = useStyles();
-  const [fonts, setFonts] = useState([]);
-  const { title } = useContext(FontContext);
+  const { title, titleV, loadFonts } = useContext(FontContext);
+  const [fonts] = loadFonts;
   const [titleFont, setTitleFont] = title;
-  const { titleV } = useContext(FontContext);
   const [titleVariant, setTitleVariant] = titleV;
   const [variants, setVariants] = useState([]);
-  
+
   const bodyStyle = {
     display: "flex",
     margin: "5px",
-    height: "40px",
+    height: "45px",
     justifyContent: "flex-start",
-    alignItems:"center",
+    alignItems: "center",
     padding: "5px",
-    flexDirection: "row"
+    flexDirection: "row",
   };
-  
-
-  useEffect(() => {
-    let arr = [];
-    const fetchData = async () => {
-      const result = await axios(
-        "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCtrYe5NA6nnIxkKEO61XM2oS-USy-BMUQ&sort=popularity"
-      );
-      for (let x = 0; x < 50; x++) {
-        arr.push(result.data.items[x]);
-      }
-      setFonts(arr);
-    };
-
-    fetchData();
-  }, []);
 
   const randomize = () => {
     let num = Math.floor(Math.random() * fonts.length);
@@ -63,7 +43,7 @@ export default function SimpleSelect() {
     setTitleFont(randomFont.family);
     setVariants(randomFont.variants);
     let vnum = Math.floor(Math.random() * randomFont.variants.length);
-    setTitleVariant(randomFont.variants[vnum])
+    setTitleVariant(randomFont.variants[vnum]);
   };
 
   const handleChange = (event) => {
@@ -79,39 +59,41 @@ export default function SimpleSelect() {
 
   return (
     <div>
-      <Card style={{width: '500px'}}>
-    <div style={bodyStyle}>
-      <FormControl className={classes.formControl}>
-        <InputLabel>Title Font</InputLabel>
-        <Select value={titleFont} onChange={handleChange}>
-          {fonts.map((font) => (
-            <MenuItem key={font.family} value={font.family}>
-              {font.family}
-            </MenuItem>
-          ))}
-        </Select>
-        <FormHelperText></FormHelperText>
-      </FormControl>
-      <FormControl className={classes.formControl}>
-        <InputLabel>Variants</InputLabel>
-        <Select value={titleVariant} onChange={handleVariant}>
-          {variants.map((variant) => (
-            <MenuItem key={variant} value={variant}>
-              {variant}
-            </MenuItem>
-          ))}
-        </Select>
-        <FormHelperText></FormHelperText>
-      </FormControl>
-      <Button size="x-small" variant="contained" onClick={() => randomize()}>
-        Random Title Font?
-      </Button>
-      </div>
-      <div style={bodyStyle}>
-      <h2 style={{ fontFamily: `${titleFont}`, fontWeight: `${titleVariant}` }}>
-        This will be your title in {titleFont}, {titleVariant}
-      </h2>
-      </div>
+      <Card style={{ width: "450px", margin: "3px" }}>
+        <div style={bodyStyle}>
+          <FormControl className={classes.formControl}>
+            <InputLabel>Title Font</InputLabel>
+            <Select value={titleFont} onChange={handleChange}>
+              {fonts.map((font) => (
+                <MenuItem key={font.family} value={font.family}>
+                  {font.family}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          <FormControl className={classes.formControl}>
+            <InputLabel>Variants</InputLabel>
+            <Select value={titleVariant} onChange={handleVariant}>
+              {variants.map((variant) => (
+                <MenuItem key={variant} value={variant}>
+                  {variant}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          <Button size="small" variant="contained" onClick={() => randomize()}>
+            Random Title Font?
+          </Button>
+        </div>
+        <div style={bodyStyle}>
+          <h2
+            style={{
+              fontFamily: `${titleFont}`,
+              fontWeight: `${titleVariant}`,
+            }}>
+            This will be your title in {titleFont}, {titleVariant}
+          </h2>
+        </div>
       </Card>
     </div>
   );
