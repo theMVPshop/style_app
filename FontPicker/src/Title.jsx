@@ -8,6 +8,9 @@ import Select from "@material-ui/core/Select";
 import axios from "axios";
 import Button from "@material-ui/core/Button";
 import { FontContext } from "./FontContext";
+import './Picker.css';
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -76,6 +79,7 @@ export default function SimpleSelect() {
 
   return (
     <div>
+      <Card style={{width: '500px'}}>
     <div style={bodyStyle}>
       <FormControl className={classes.formControl}>
         <InputLabel>Title Font</InputLabel>
@@ -108,7 +112,7 @@ export default function SimpleSelect() {
         This will be your title in {titleFont}, {titleVariant}
       </h2>
       </div>
-    
+      </Card>
     </div>
   );
 }
