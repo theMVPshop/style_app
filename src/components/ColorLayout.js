@@ -1,5 +1,5 @@
 
-import ColorLayoutButtons from "./ColorLayoutButtons";
+import ColorLayoutWidgets from "./ColorLayoutWidgets";
 import classes from "./ColorLayout.module.css";
 
 
@@ -7,7 +7,7 @@ const ColorLayout = (props) => {
 
   return (
     <div className={classes.colorWrapper}>
-      <ColorLayoutButtons handleColorChange={props.handleColorChange}/>
+      <ColorLayoutWidgets handleColorChange={props.handleColorChange}/>
     </div>
   );
 
