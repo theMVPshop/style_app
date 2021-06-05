@@ -13,7 +13,8 @@ function Font() {
     display: "flex",
     margin: "10px",
     padding: "5px",
-    flexDirection: "column"
+    flexDirection: "column",
+    maxWidth: '350px'
   };
 
   return (
@@ -24,8 +25,9 @@ function Font() {
         <SimpleSelect/>
         <SubTitleComponent/>
         <BodyComponent/>
-        <ExampleComponent/>
+        {/* <ExampleComponent/> */}
       </Paper>
+      <ExampleComponent />
     </FontProvider>
   );
 }

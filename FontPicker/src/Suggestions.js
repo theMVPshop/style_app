@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { FontContext } from './FontContext';
 import Button from "@material-ui/core/Button";
+import Card from "@material-ui/core/Card";
 
 export default function Suggestions() {
   
@@ -19,12 +20,12 @@ export default function Suggestions() {
 
   const bodyStyle = {
     display: "flex",
-    margin: "10px",
+    margin: "5px",
     height: "40px",
     justifyContent: "flex-start",
-    alignItems:"center",
+    alignItems: "center",
     padding: "5px",
-    flexDirection: "row"
+    flexDirection: "row",
   };
   const buttonStyle = {
     margin: "5px"
@@ -93,15 +94,21 @@ export default function Suggestions() {
     setSubVariant(suggestionsArr[count].subVariant)
   };
   return(
+    <div>
+      <Card style={{ maxWidth: "450px", margin: "3px" }}>
     <div style={bodyStyle}>
+      
        <h4> Would you like to start with a    
        <Button size="small" variant="contained" style={buttonStyle} onClick={() => handleChange()}>
          Suggested Font Pairing?
       </Button></h4>
+      
       {/* <h3 style={{fontFamily: `${titleFont}`}}>This is your title in {titleFont}, {titleVariant}</h3>
       <p style={{ fontFamily: `${bodyFont}` }}>
         This will be your body in {bodyFont}, {bodyVariant}!
       </p> */}
+      </div>
+      </Card>
       </div>
   )
 }

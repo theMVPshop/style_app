@@ -59,7 +59,7 @@ export default function BodyComponent() {
 
   return (
     <div>
-      <Card style={{ width: "450px", margin: "3px" }}>
+      <Card style={{ maxWidth: "450px", margin: "3px" }}>
         <div style={bodyStyle}>
           <FormControl className={classes.formControl}>
             <InputLabel>Subtitle Font</InputLabel>
