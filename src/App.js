@@ -5,6 +5,8 @@ import ThumbnailLayout from './components/ThumbnailLayout';
 import FontLayout from './components/FontLayout';
 import ColorLayout from './components/ColorLayout';
 import classes from './App.module.css';
+import Font from './FontComponents/Font';
+import {FontProvider} from './FontComponents/FontContext'
 
 function App() {
 
@@ -27,6 +29,7 @@ function App() {
 
   return (
     <div>
+      <FontProvider>
       <ThumbnailLayout handleLayoutChange={displayLayoutHandler} />
       <div className={classes.layoutWrapper}>
         <ColorLayout handleColorChange={displayColorHandler} />
@@ -35,8 +38,10 @@ function App() {
           displayColorId={displayColor} 
           displayFontId={displayFont}
           />
-        <FontLayout handleFontChange={displayFontHandler}/>
+        {/* <FontLayout handleFontChange={displayFontHandler}/> */}
+      <Font />
       </div>
+      </FontProvider>
     </div>
   
   );
