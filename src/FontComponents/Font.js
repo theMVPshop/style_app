@@ -18,17 +18,19 @@ function Font() {
   };
 
   return (
-    
+
       <Paper style={bodyStyle} elevation={3}>
         <FontLoader/>
         <Suggestions/>
         <SimpleSelect/>
         <SubTitleComponent/>
         <BodyComponent/>
+
        
       </Paper>
      
    
+
   );
 }
 
