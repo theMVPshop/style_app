@@ -10,19 +10,18 @@ const MainDisplay = props => {
 
   console.log(props.displayLayoutId)
   console.log(props.displayColorId)
+  console.log(props.displaySecondaryColorId)
 
   const layoutComponent = (props) => {
 
-    const backgroundHexColor = props.displayColorId;
-    console.log(backgroundHexColor);
-
-    const fontType = props.displayFontId;
-    console.log(fontType)
+    const backgroundHexColor = props.displayBackgroundColorId;
+    const secondaryHexColor = props.displaySecondaryColorId;
+    const fontHexColor = props.displayFontColorId;
 
 
     switch (props.displayLayoutId) {
       case "About":
-        return (<LayoutAbout style={{backgroundColor: backgroundHexColor}} font={{fontFamily: fontType}} />)
+        return (<LayoutAbout style={{backgroundColor: backgroundHexColor}} secondary={{backgroundColor: secondaryHexColor}} font={{color: fontHexColor}} />)
       case "Display1":
         return (<Layout1 style={{backgroundColor: backgroundHexColor}}/>)
       case "Display2":
@@ -32,7 +31,7 @@ const MainDisplay = props => {
       case "Display4":
         return (<Layout4 style={{backgroundColor: backgroundHexColor}}/>)
       default: 
-        return (<LayoutAbout style={{backgroundColor: backgroundHexColor}} font={{fontFamily: fontType}} />)
+        return (<LayoutAbout style={{backgroundColor: backgroundHexColor}} secondary={{backgroundColor: secondaryHexColor}} font={{color: fontHexColor}}/>)
     }
   }
 
