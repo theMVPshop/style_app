@@ -65,7 +65,7 @@ export default function FontLoader(){
         
       ]}/>
     } else {
-      console.log('all different')
+
       return <GoogleFontLoader
       fonts={[
         {

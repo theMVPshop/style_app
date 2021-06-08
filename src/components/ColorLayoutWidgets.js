@@ -1,21 +1,25 @@
 import React from 'react';
-import { SketchPicker } from 'react-color';
+import { ChromePicker } from 'react-color';
 
-class ColorLayoutButtons extends React.Component {
+class ColorLayoutWidgets extends React.Component {
+
 
   state = {
-    background: '#fff',
+    backgroundColor: '#fff'
   };
 
-  handleChangeComplete = (color) => {
-    this.setState({ background: color.hex });
-  };
+  handleChangeComplete = (color, event) => {
+    this.setState({ backgroundColor: color.hex,
+  }, function(){})
+        this.props.handleColorChange(color.hex)
+
+};
 
   render() {
     return (
-      <SketchPicker
-        color={ this.state.background }
-        onChangeComplete={ this.handleChangeComplete }
+      <ChromePicker
+        color={this.state.backgroundColor}
+        onChangeComplete={this.handleChangeComplete}
       />
     );
   }
@@ -23,9 +27,9 @@ class ColorLayoutButtons extends React.Component {
 
 // const ColorLayoutButtons = (props) => {
 
-//   const onColorClick = (color) => {
-//     props.handleColorChange(color)
-//   };
+  // const onColorClick = (color) => {
+  //   props.handleColorChange(color)
+  // };
 
 
 //     return (
@@ -51,4 +55,4 @@ class ColorLayoutButtons extends React.Component {
 //   )
 // }
 
-export default ColorLayoutButtons;
+export default ColorLayoutWidgets;
