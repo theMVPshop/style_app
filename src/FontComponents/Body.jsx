@@ -82,7 +82,11 @@ export default function BodyComponent() {
             </Select>
           </FormControl>
           <Button size="small" variant="contained" onClick={() => randomize()}>
-            Random Subitle Font?
+
+            Random Body Font?
+
+           
+
           </Button>
         </div>
         <div style={bodyStyle}>

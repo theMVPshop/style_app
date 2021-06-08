@@ -65,6 +65,7 @@ export default function FontLoader(){
         
       ]}/>
     } else {
+
       return <GoogleFontLoader
       fonts={[
         {

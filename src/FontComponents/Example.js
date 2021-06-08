@@ -24,17 +24,14 @@ const useStyles = makeStyles({
 });
 
 export default function ExampleComponent() {
-  const { body } = useContext(FontContext);
+
+  const { body, bodyV, title, titleV, subTitle, subV } = useContext(FontContext);
   const [bodyFont] = body;
-  const { bodyV } = useContext(FontContext);
   const [bodyVariant] = bodyV;
-  const { title } = useContext(FontContext);
   const [titleFont] = title;
-  const { titleV } = useContext(FontContext);
   const [titleVariant] = titleV;
-  const { subTitle } = useContext(FontContext);
   const [subTitleFont] = subTitle;
-  const { subV } = useContext(FontContext);
+
   const [subVariant] = subV;
   const classes = useStyles();
 
