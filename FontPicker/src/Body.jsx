@@ -62,7 +62,7 @@ export default function BodyComponent() {
       <Card style={{ maxWidth: "450px", margin: "3px" }}>
         <div style={bodyStyle}>
           <FormControl className={classes.formControl}>
-            <InputLabel>Subtitle Font</InputLabel>
+            <InputLabel>Body Font</InputLabel>
             <Select value={bodyFont} onChange={handleChange}>
               {fonts.map((font) => (
                 <MenuItem key={font.family} value={font.family}>
