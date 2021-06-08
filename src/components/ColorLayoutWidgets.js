@@ -11,7 +11,7 @@ class ColorLayoutWidgets extends React.Component {
   handleChangeComplete = (color, event) => {
     this.setState({ backgroundColor: color.hex,
   }, function(){})
-        this.props.handleColorChange(color.hex)
+        this.props.handleBackgroundColorChange(color.hex)
 
 };
 
@@ -24,35 +24,5 @@ class ColorLayoutWidgets extends React.Component {
     );
   }
 }
-
-// const ColorLayoutButtons = (props) => {
-
-  // const onColorClick = (color) => {
-  //   props.handleColorChange(color)
-  // };
-
-
-//     return (
-//       <div>
-//         <h2>list of color buttons</h2>
-//       <div/>
-      
-//       <div className={classes.colorButtonWrapper}>
-//         {colordata.colors.map((color, i) => {
-//           return <button style={{backgroundColor: color.hex}} 
-//             onClick={() => {onColorClick(color.hex)}}
-//             key={i}>
-//             {color.colorName}
-//           </button>
-//           })}
-//       </div>
-
-//       {/* <div>
-//         <ChromePicker/>
-//       </div> */}
-
-//     </div>
-//   )
-// }
 
 export default ColorLayoutWidgets;

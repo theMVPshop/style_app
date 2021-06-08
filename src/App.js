@@ -11,33 +11,41 @@ function App() {
 
   const [displayLayout, setDisplayLayout] = useState('');
   const [displayColor, setDisplayColor] = useState('');
-  // const [displayFont, setDisplayFont] = useState('');
+  const [displaySecondaryColor, setDisplaySecondaryColor] = useState('');
+  const [displayFontColor, setDisplayFontColor] = useState('');
 
   const displayLayoutHandler = (displayId) => {
     setDisplayLayout(displayId);
   }
 
-  const displayColorHandler = (colorId) => {
-    setDisplayColor(colorId);
-    console.log(colorId)
+  const displayBackgroundColorHandler = (backgroundColorId) => {
+    setDisplayColor(backgroundColorId);
+    console.log(backgroundColorId)
   }
 
-  // const displayFontHandler = (fontId) => {
-  //   setDisplayFont(fontId);
-  // }
+  const displaySecondaryColorHandler = (secondaryColorId) => {
+    setDisplaySecondaryColor(secondaryColorId);
+  }
+
+  const displayFontColorHandler = (fontColorId) => {
+    setDisplayFontColor(fontColorId);
+  }
 
   return (
     <div>
       <FontProvider>
       <ThumbnailLayout handleLayoutChange={displayLayoutHandler} />
       <div className={classes.layoutWrapper}>
-        <ColorLayout handleColorChange={displayColorHandler} />
+        <ColorLayout 
+          handleColorChange={displayBackgroundColorHandler}
+          handleSecondaryColorChange={displaySecondaryColorHandler}
+          handleFontColorChange={displayFontColorHandler} />
         <MainDisplay 
           displayLayoutId={displayLayout}
-          displayColorId={displayColor} 
-          // displayFontId={displayFont}
+          displayBackgroundColorId={displayBackgroundColor}
+          displaySecondaryColorId={displaySecondaryColor}
+          displayFontColorId={displayFontColor}
           />
-        {/* <FontLayout handleFontChange={displayFontHandler}/> */}
       <Font />
       </div>
       </FontProvider>

@@ -7,7 +7,11 @@ const ColorLayout = (props) => {
 
   return (
     <div className={classes.colorWrapper}>
-      <ColorLayoutWidgets handleColorChange={props.handleColorChange}/>
+      <ColorLayoutWidgets 
+        handleBackgroundColorChange={props.handleBackgroundColorChange}
+        handleSecondaryColorChange={props.handleSecondaryColorChange}
+        handleFontColorChange={props.handleFontColorChange}
+      />
     </div>
   );
 
