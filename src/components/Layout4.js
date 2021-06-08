@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { FontContext } from '../FontComponents/FontContext';
 
 const Layout4 = props => {
-  const { body, bodyV, title, titleV, subTitle, subV } = useContext(FontContext);
+  const { body, bodyV, title, titleV } = useContext(FontContext);
   const [bodyFont] = body;
   const [bodyVariant] = bodyV;
   const [titleFont] = title;
