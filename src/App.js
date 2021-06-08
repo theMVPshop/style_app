@@ -2,7 +2,6 @@ import './App.css';
 import { useState } from 'react';
 import MainDisplay from './components/MainDisplay';
 import ThumbnailLayout from './components/ThumbnailLayout';
-import FontLayout from './components/FontLayout';
 import ColorLayout from './components/ColorLayout';
 import classes from './App.module.css';
 import Font from './FontComponents/Font';
@@ -12,7 +11,7 @@ function App() {
 
   const [displayLayout, setDisplayLayout] = useState('');
   const [displayColor, setDisplayColor] = useState('');
-  const [displayFont, setDisplayFont] = useState('');
+  // const [displayFont, setDisplayFont] = useState('');
 
   const displayLayoutHandler = (displayId) => {
     setDisplayLayout(displayId);
@@ -23,9 +22,9 @@ function App() {
     console.log(colorId)
   }
 
-  const displayFontHandler = (fontId) => {
-    setDisplayFont(fontId);
-  }
+  // const displayFontHandler = (fontId) => {
+  //   setDisplayFont(fontId);
+  // }
 
   return (
     <div>
@@ -36,7 +35,7 @@ function App() {
         <MainDisplay 
           displayLayoutId={displayLayout}
           displayColorId={displayColor} 
-          displayFontId={displayFont}
+          // displayFontId={displayFont}
           />
         {/* <FontLayout handleFontChange={displayFontHandler}/> */}
       <Font />

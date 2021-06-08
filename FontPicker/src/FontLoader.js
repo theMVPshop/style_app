@@ -30,7 +30,6 @@ export default function FontLoader(){
         }
       ]}/>
     } else if (titleFont === subTitleFont){
-      console.log("title=subtitle")
       return <GoogleFontLoader
       fonts={[
         {

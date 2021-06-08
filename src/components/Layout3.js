@@ -3,13 +3,11 @@ import React, { useContext } from 'react';
 import { FontContext } from '../FontComponents/FontContext';
 
 const Layout3 = props => {
-  const { body, bodyV, title, titleV, subTitle, subV } = useContext(FontContext);
+  const { body, bodyV, title, titleV } = useContext(FontContext);
   const [bodyFont] = body;
   const [bodyVariant] = bodyV;
   const [titleFont] = title;
   const [titleVariant] = titleV;
-  const [subTitleFont] = subTitle;
-  const [subVariant] = subV;
 
   return (
     <div className={classes.wrapper}>
