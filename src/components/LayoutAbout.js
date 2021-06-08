@@ -13,7 +13,7 @@ const LayoutAbout = props => {
   const [subVariant] = subV;
 
   return (
-    <div className={classes.wrapper} font={props.font}>
+    <div className={classes.wrapper} style={props.font}>
       <div className={classes.boxContainer} style={props.style}>
         <div className={classes.header}><h1 style={{ fontFamily: `${titleFont}`, fontWeight: `${titleVariant}` }}>About</h1></div>
           <div className={classes.body}>
