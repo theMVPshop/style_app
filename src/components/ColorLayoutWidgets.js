@@ -1,6 +1,5 @@
 import React from 'react';
-import { ChromePicker } from 'react-color';
-import BackgroundColorWidget from '/.BackgroundColorWidget';
+import BackgroundColorWidget from './BackgroundColorWidget';
 import SecondaryColorWidget from './SecondaryColorWidget';
 import FontColorWidget from './FontColorWidget';
 

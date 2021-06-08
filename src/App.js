@@ -37,7 +37,7 @@ function App() {
       <ThumbnailLayout handleLayoutChange={displayLayoutHandler} />
       <div className={classes.layoutWrapper}>
         <ColorLayout 
-          handleColorChange={displayBackgroundColorHandler}
+          handleBackgroundColorChange={displayBackgroundColorHandler}
           handleSecondaryColorChange={displaySecondaryColorHandler}
           handleFontColorChange={displayFontColorHandler} />
         <MainDisplay 
