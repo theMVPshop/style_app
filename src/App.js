@@ -10,7 +10,7 @@ import {FontProvider} from './FontComponents/FontContext'
 function App() {
 
   const [displayLayout, setDisplayLayout] = useState('');
-  const [displayColor, setDisplayColor] = useState('');
+  const [displayBackgroundColor, setDisplayColor] = useState('');
   const [displaySecondaryColor, setDisplaySecondaryColor] = useState('');
   const [displayFontColor, setDisplayFontColor] = useState('');
 
