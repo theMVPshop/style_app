@@ -1,28 +1,17 @@
 import React from 'react';
 import { ChromePicker } from 'react-color';
+import BackgroundColorWidget from '/.BackgroundColorWidget';
+import SecondaryColorWidget from './SecondaryColorWidget';
+import FontColorWidget from './FontColorWidget';
 
-class ColorLayoutWidgets extends React.Component {
-
-
-  state = {
-    backgroundColor: '#fff'
-  };
-
-  handleChangeComplete = (color, event) => {
-    this.setState({ backgroundColor: color.hex,
-  }, function(){})
-        this.props.handleBackgroundColorChange(color.hex)
-
-};
-
-  render() {
-    return (
-      <ChromePicker
-        color={this.state.backgroundColor}
-        onChangeComplete={this.handleChangeComplete}
-      />
-    );
-  }
+const ColorLayoutWidgets = props => {
+  return (
+    <div>
+        <BackgroundColorWidget handleBackgroundColorChange={props.handleBackgroundColorChange} />
+        <SecondaryColorWidget handleSecondaryColorChange={props.handleSecondaryColorChange} />
+        <FontColorWidget handleFontColorChange={props.handleFontColorChange} />
+    </div>
+  )
 }
 
 export default ColorLayoutWidgets;
