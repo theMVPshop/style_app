@@ -20,17 +20,35 @@ const MainDisplay = props => {
 
     switch (props.displayLayoutId) {
       case "About":
-        return (<LayoutAbout style={{backgroundColor: backgroundHexColor}} secondary={{backgroundColor: secondaryHexColor}} font={{color: fontHexColor}}/>)
+        return (<LayoutAbout 
+          style={{backgroundColor: backgroundHexColor}} 
+          secondary={{backgroundColor: secondaryHexColor}} 
+          font={{color: fontHexColor}}/>)
       case "Display1":
-        return (<Layout1 style={{backgroundColor: backgroundHexColor}}/>)
+        return (<Layout1 
+          style={{backgroundColor: backgroundHexColor}} 
+          secondary={{backgroundColor: secondaryHexColor}} 
+          font={{color: fontHexColor}}/>)
       case "Display2":
-        return (<Layout2 style={{backgroundColor: backgroundHexColor}}/>)
+        return (<Layout2 
+          style={{backgroundColor: backgroundHexColor}} 
+          secondary={{backgroundColor: secondaryHexColor}} 
+          font={{color: fontHexColor}}/>)
       case "Display3":
-        return (<Layout3 style={{backgroundColor: backgroundHexColor}}/>)
+        return (<Layout3 
+          style={{backgroundColor: backgroundHexColor}} 
+          secondary={{backgroundColor: secondaryHexColor}} 
+          font={{color: fontHexColor}}/>)
       case "Display4":
-        return (<Layout4 style={{backgroundColor: backgroundHexColor}}/>)
+        return (<Layout4 
+          style={{backgroundColor: backgroundHexColor}} 
+          secondary={{backgroundColor: secondaryHexColor}} 
+          font={{color: fontHexColor}}/>)
       default: 
-        return (<LayoutAbout style={{backgroundColor: backgroundHexColor}} secondary={{backgroundColor: secondaryHexColor}} font={{color: fontHexColor}}/>)
+        return (<LayoutAbout 
+          style={{backgroundColor: backgroundHexColor}} 
+          secondary={{backgroundColor: secondaryHexColor}} 
+          font={{color: fontHexColor}}/>)
     }
   }
 

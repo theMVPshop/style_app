@@ -6,7 +6,7 @@ import classes from "./ColorLayout.module.css";
 const ColorLayout = (props) => {
 
   return (
-    <div className={classes.colorWrapper}>
+    <div >
       <ColorLayoutWidgets 
         handleBackgroundColorChange={props.handleBackgroundColorChange}
         handleSecondaryColorChange={props.handleSecondaryColorChange}
