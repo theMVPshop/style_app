@@ -7,6 +7,7 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
+import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -21,6 +22,14 @@ const useStyles = makeStyles((theme) => ({
 const ColorLayoutWidgets = props => {
   const [ widget, setWidget ] = useState('background')
   const classes = useStyles();
+
+  const bodyStyle = {
+    display: "flex",
+    margin: "10px",
+    padding: "5px",
+    flexDirection: "column",
+    maxWidth: '350px'
+  };
 
   const handleChange = (event) => {
     setWidget(event.target.value)
@@ -37,6 +46,7 @@ const ColorLayoutWidgets = props => {
   }
   return (
     <div>
+      <Paper style={bodyStyle} elevation={3}>
       <FormControl className={classes.formControl}>
             <InputLabel>Which Color?</InputLabel>
             <Select  onChange={handleChange}>
@@ -47,6 +57,7 @@ const ColorLayoutWidgets = props => {
             </Select>
           </FormControl>
           <ColorLoader />
+          </Paper>
     </div>
   )
 }
