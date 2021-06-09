@@ -12,13 +12,13 @@ const Layout4 = props => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.boxContainer} style={props.style}>
-        <div className={classes.column1}>
-          <h1 style={{ fontFamily: `${titleFont}`, fontWeight: `${titleVariant}` }}>Title</h1>
-          <p style={{ fontFamily: `${bodyFont}`, fontWeight: `${bodyVariant}` }} className={classes.text1}>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+        <div className={classes.column1} style={props.secondary}>
+          <h1 style={{ fontFamily: `${titleFont}`, fontWeight: `${titleVariant}`, color: `${props.font.color}` }}>Title</h1>
+          <p style={{ fontFamily: `${bodyFont}`, fontWeight: `${bodyVariant}`, color: `${props.font.color}` }} className={classes.text1}>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
         </div>
-        <div className={classes.column2}>
-          <div className={classes.box1}><h1 style={{ fontFamily: `${titleFont}`, fontWeight: `${titleVariant}` }}>Title</h1><p style={{ fontFamily: `${bodyFont}`, fontWeight: `${bodyVariant}` }}>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p></div>
-          <div className={classes.box2}><h1 style={{ fontFamily: `${titleFont}`, fontWeight: `${titleVariant}` }}>Title</h1><p style={{ fontFamily: `${bodyFont}`, fontWeight: `${bodyVariant}` }}>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p></div>
+        <div className={classes.column2} style={props.secondary}>
+          <div className={classes.box1}><h1 style={{ fontFamily: `${titleFont}`, fontWeight: `${titleVariant}`, color: `${props.font.color}` }}>Title</h1><p style={{ fontFamily: `${bodyFont}`, fontWeight: `${bodyVariant}`, color: `${props.font.color}` }}>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p></div>
+          <div className={classes.box2}><h1 style={{ fontFamily: `${titleFont}`, fontWeight: `${titleVariant}`, color: `${props.font.color}` }}>Title</h1><p style={{ fontFamily: `${bodyFont}`, fontWeight: `${bodyVariant}`, color: `${props.font.color}` }}>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p></div>
         </div>
       </div>
     </div>
