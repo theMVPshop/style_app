@@ -1,6 +1,7 @@
 .layoutWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows:none;
+  place-items: center;
   background: skyblue;
 }
