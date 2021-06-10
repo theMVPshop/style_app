@@ -1,6 +1,6 @@
 import { ChromePicker } from 'react-color';
 import React from 'react';
-import {FontContext} from '../FontComponents/FontContext'
+import {FontContext} from '../FontComponents/FontContext';
 
 class BackgroundColorWidget extends React.Component {
   static contextType = FontContext

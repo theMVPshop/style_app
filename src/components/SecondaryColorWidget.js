@@ -1,5 +1,6 @@
 import { ChromePicker } from 'react-color';
 import React from 'react';
+import {FontContext} from '../FontComponents/FontContext';
 
 class SecondaryColorWidget extends React.Component {
 
@@ -9,7 +10,7 @@ state = {
 
 handleChangeComplete = (color, event) => {
   this.setState({ backgroundColor: color.hex,
-}, function(){})
+})
   this.props.handleSecondaryColorChange(color.hex)
 };
 

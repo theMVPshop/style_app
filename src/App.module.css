@@ -1,7 +1,9 @@
 .layoutWrapper {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  /* grid-template-columns: 33% 33% 33%;
   grid-template-rows:none;
-  place-items: center;
+  place-items: center; */
   background: skyblue;
 }
