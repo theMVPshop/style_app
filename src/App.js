@@ -40,13 +40,15 @@ function App() {
           handleBackgroundColorChange={displayBackgroundColorHandler}
           handleSecondaryColorChange={displaySecondaryColorHandler}
           handleFontColorChange={displayFontColorHandler} />
+        <div className={classes.main}>
         <MainDisplay 
           displayLayoutId={displayLayout}
           displayBackgroundColorId={displayBackgroundColor}
           displaySecondaryColorId={displaySecondaryColor}
           displayFontColorId={displayFontColor}
           />
-      <Font />
+        </div>
+        <Font />
       </div>
       </FontProvider>
     </div>

@@ -1,6 +1,5 @@
 
 import ColorLayoutWidgets from "./ColorLayoutWidgets";
-import classes from "./ColorLayout.module.css";
 
 
 const ColorLayout = (props) => {
