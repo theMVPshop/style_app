@@ -48,7 +48,7 @@ const ColorLayoutWidgets = props => {
     <div>
       <Paper style={bodyStyle} elevation={3}>
       <FormControl className={classes.formControl}>
-            <InputLabel>Which Color?</InputLabel>
+            <InputLabel>Area to Color?</InputLabel>
             <Select  onChange={handleChange}>
               
                 <MenuItem  value={"background"}>background</MenuItem>
