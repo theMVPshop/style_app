@@ -52,7 +52,7 @@ export default function Suggestions() {
       title: "Merriweather",
       titleVariant: "regular",
       subtitle: "Merriweather",
-      subVariant: "300",
+      subVariant: "regular",
       body: "Lato",
       bodyVariant: "regular"
     },
@@ -74,9 +74,9 @@ export default function Suggestions() {
     },
     {
       title: "Fira Sans",
-      titleVariant: "300",
+      titleVariant: "500",
       subtitle: "Fira Sans",
-      subVariant: "300",
+      subVariant: "500",
       body: "Merriweather",
       bodyVariant: "regular"
     }
