@@ -4,27 +4,33 @@ import axios from "axios";
 export const FontContext = createContext();
 
 export function FontProvider(props) {
-  const [titleFont, setTitleFont] = useState("Roboto");
-  const [titleVariant, setTitleVariant] = useState("regular");
-  const [bodyFont, setBodyFont] = useState("Roboto");
-  const [bodyVariant, setBodyVariant] = useState("regular");
-  const [subTitleFont, setSubTitleFont] = useState("Roboto");
-  const [subVariant, setSubVariant] = useState("regular");
+  const [titleFont, setTitleFont] = useState("");
+  const [titleVariant, setTitleVariant] = useState("");
+  const [bodyFont, setBodyFont] = useState("");
+  const [bodyVariant, setBodyVariant] = useState("");
+  const [subTitleFont, setSubTitleFont] = useState("");
+  const [subVariant, setSubVariant] = useState("");
   const [fonts, setFonts] = useState([]);
   const [background, setBackground] = useState("#721659");
-  const [secondary, setSecondary] = useState('#ffff');
-  const [fontColor, setFontColor] = useState('#ffff')
+  const [secondary, setSecondary] = useState("#ffff");
+  const [fontColor, setFontColor] = useState("#ffff");
 
   useEffect(() => {
     let arr = [];
     const fetchData = async () => {
       const result = await axios(
-        "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCtrYe5NA6nnIxkKEO61XM2oS-USy-BMUQ&sort=popularity"
+        `https://www.googleapis.com/webfonts/v1/webfonts?key=${process.env.REACT_APP_API_KEY}&sort=popularity`
       );
       for (let x = 0; x < 50; x++) {
         arr.push(result.data.items[x]);
       }
       setFonts(arr);
+      setTitleFont("Roboto");
+      setTitleVariant("regular");
+      setSubTitleFont("Roboto");
+      setSubVariant("regular");
+      setBodyFont("Roboto");
+      setBodyVariant("regular");
     };
 
     fetchData();
@@ -42,7 +48,7 @@ export function FontProvider(props) {
         loadFonts: [fonts, setFonts],
         background: [background, setBackground],
         secondary: [secondary, setSecondary],
-        fontColor: [fontColor, setFontColor]
+        fontColor: [fontColor, setFontColor],
       }}
     >
       {props.children}

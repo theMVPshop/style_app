@@ -11,7 +11,7 @@ const LayoutAbout = props => {
   const [titleVariant] = titleV;
   const [subTitleFont] = subTitle;
   const [subVariant] = subV;
-  console.log(props.font)
+  
   return (
     <div className={classes.wrapper} >
       <div className={classes.boxContainer} style={props.style}>
