@@ -11,7 +11,9 @@ export function FontProvider(props) {
   const [subTitleFont, setSubTitleFont] = useState("Roboto");
   const [subVariant, setSubVariant] = useState("regular");
   const [fonts, setFonts] = useState([]);
-  const [background, setBackground] = useState("#ffff")
+  const [background, setBackground] = useState("#721659");
+  const [secondary, setSecondary] = useState('#ffff');
+  const [fontColor, setFontColor] = useState('#ffff')
 
   useEffect(() => {
     let arr = [];
@@ -38,7 +40,9 @@ export function FontProvider(props) {
         subTitle: [subTitleFont, setSubTitleFont],
         subV: [subVariant, setSubVariant],
         loadFonts: [fonts, setFonts],
-        background: [background, setBackground]
+        background: [background, setBackground],
+        secondary: [secondary, setSecondary],
+        fontColor: [fontColor, setFontColor]
       }}
     >
       {props.children}
