@@ -1,22 +1,21 @@
-import React, { useState, useContext } from 'react';
-import { FontContext } from './FontContext';
+import React, { useState, useContext } from "react";
+import { FontContext } from "./FontContext";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 
 export default function Suggestions() {
-  
-  const { title }= useContext(FontContext)
-  const [ , setTitleFont] = title;
+  const { title } = useContext(FontContext);
+  const [, setTitleFont] = title;
   const { titleV } = useContext(FontContext);
-  const [ , setTitleVariant] = titleV;
-  const { body }= useContext(FontContext)
-  const [ , setBodyFont] = body;
-  const { bodyV } = useContext(FontContext)
-  const [ , setBodyVariant] = bodyV;
+  const [, setTitleVariant] = titleV;
+  const { body } = useContext(FontContext);
+  const [, setBodyFont] = body;
+  const { bodyV } = useContext(FontContext);
+  const [, setBodyVariant] = bodyV;
   const { subTitle } = useContext(FontContext);
-  const [ , setSubTitleFont] = subTitle;
+  const [, setSubTitleFont] = subTitle;
   const { subV } = useContext(FontContext);
-  const [ , setSubVariant] = subV;
+  const [, setSubVariant] = subV;
 
   const bodyStyle = {
     display: "flex",
@@ -28,8 +27,8 @@ export default function Suggestions() {
     flexDirection: "row",
   };
   const buttonStyle = {
-    margin: "5px"
-  }
+    margin: "5px",
+  };
 
   const suggestionsArr = [
     {
@@ -38,7 +37,7 @@ export default function Suggestions() {
       subtitle: "Open Sans",
       subVariant: "regular",
       body: "Roboto",
-      bodyVariant: "regular"
+      bodyVariant: "regular",
     },
     {
       title: "Playfair Display",
@@ -46,7 +45,7 @@ export default function Suggestions() {
       subtitle: "Playfair Display",
       subVariant: "regular",
       body: "Montserrat",
-      bodyVariant: "300"
+      bodyVariant: "300",
     },
     {
       title: "Merriweather",
@@ -54,7 +53,7 @@ export default function Suggestions() {
       subtitle: "Merriweather",
       subVariant: "regular",
       body: "Lato",
-      bodyVariant: "regular"
+      bodyVariant: "regular",
     },
     {
       title: "PT Sans Narrow",
@@ -62,7 +61,7 @@ export default function Suggestions() {
       subtitle: "PT Sans Narrow",
       subVariant: "700",
       body: "PT Sans",
-      bodyVariant: "regular"
+      bodyVariant: "regular",
     },
     {
       title: "Lora",
@@ -70,7 +69,7 @@ export default function Suggestions() {
       subtitle: "Lora",
       subVariant: "regular",
       body: "Lato",
-      bodyVariant: "regular"
+      bodyVariant: "regular",
     },
     {
       title: "Fira Sans",
@@ -78,37 +77,40 @@ export default function Suggestions() {
       subtitle: "Fira Sans",
       subVariant: "500",
       body: "Merriweather",
-      bodyVariant: "regular"
-    }
+      bodyVariant: "regular",
+    },
   ];
-  
-  
-  const [count, setCount] = useState(Math.floor(Math.random() * suggestionsArr.length));
+
+  const [count, setCount] = useState(
+    Math.floor(Math.random() * suggestionsArr.length)
+  );
   const handleChange = () => {
-    setCount(Math.floor(Math.random() * suggestionsArr.length))
-    setTitleFont(suggestionsArr[count].title)
-    setTitleVariant(suggestionsArr[count].titleVariant)
-    setBodyFont(suggestionsArr[count].body)
-    setBodyVariant(suggestionsArr[count].bodyVariant)
-    setSubTitleFont(suggestionsArr[count].subtitle)
-    setSubVariant(suggestionsArr[count].subVariant)
+    setCount(Math.floor(Math.random() * suggestionsArr.length));
+    setTitleFont(suggestionsArr[count].title);
+    setTitleVariant(suggestionsArr[count].titleVariant);
+    setBodyFont(suggestionsArr[count].body);
+    setBodyVariant(suggestionsArr[count].bodyVariant);
+    setSubTitleFont(suggestionsArr[count].subtitle);
+    setSubVariant(suggestionsArr[count].subVariant);
   };
-  return(
+  return (
     <div>
       <Card style={{ maxWidth: "450px", margin: "3px" }}>
-    <div style={bodyStyle}>
-      
-       <h4> Would you like to start with a    
-       <Button size="small" variant="contained" style={buttonStyle} onClick={() => handleChange()}>
-         Suggested Font Pairing?
-      </Button></h4>
-      
-      {/* <h3 style={{fontFamily: `${titleFont}`}}>This is your title in {titleFont}, {titleVariant}</h3>
-      <p style={{ fontFamily: `${bodyFont}` }}>
-        This will be your body in {bodyFont}, {bodyVariant}!
-      </p> */}
-      </div>
+        <div style={bodyStyle}>
+          <h4>
+            {" "}
+            Would you like to start with a
+            <Button
+              size="small"
+              variant="contained"
+              style={buttonStyle}
+              onClick={() => handleChange()}
+            >
+              Suggested Font Pairing?
+            </Button>
+          </h4>
+        </div>
       </Card>
-      </div>
-  )
+    </div>
+  );
 }
