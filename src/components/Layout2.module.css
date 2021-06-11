@@ -1,5 +1,5 @@
 .wrapper {
-  padding: 0px 0 50px 0;
+  padding: 0px 0 54px 0;
   background-color: skyblue;
   display: flex;
   justify-content: center;
@@ -24,6 +24,7 @@
   margin: 5%;
   background-color: lightblue;
   border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .column2 {
@@ -32,8 +33,9 @@
   justify-content: center;
   align-items: center;
   background-color: lightblue;
-  margin: 5%;
-  border-radius: 5px;
+  border-top: 9px solid white;
+  border-bottom: 8px solid white;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 }
 
 .column3 {
@@ -44,6 +46,7 @@
   background-color: lightblue;
   margin: 5%;
   border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 p {
